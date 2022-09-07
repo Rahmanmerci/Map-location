@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Get SHAHUL HAMEED Current Location">
+        <lightning-record-edit-form object-api-name= {objApi}>
+            <lightning-messages> </lightning-messages>
+            <div class="slds-wrap slds-grid">
+                    <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input-field field-name="BillingStreet" value = {billingStreetVal} onchange={billingStreethand} required="true" > </lightning-input-field></p></div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input-field field-name="BillingCity" value = {billingCityVal} onchange={billingCityhand} required= "true" > </lightning-input-field></p></div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input-field field-name="BillingState" value = {billingStateVal} onchange={billingStatehand} required ="true"> </lightning-input-field></p></div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input-field field-name="BillingPostalCode" value = {billingZipVal} onchange={billingZiphand} required ="true"> </lightning-input-field></p></div>
+                <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input-field field-name="BillingCountry" value = {billingCountryval} onchange={billingCountryhand} required ="true"> </lightning-input-field></p></div>
+        </div>
+    </lightning-record-edit-form>  
+    <div class="slds-p-around_small">
+     <lightning-button variant="brand" 
+        label="Save"
+        onclick={onSave}>
+    </lightning-button><br/><br/>
+        <lightning-input-location class="slds-m-horizontal_x-large slds-m-bottom_large" label="Default coordinates" latitude={latitude} longitude={longitude}></lightning-input-location>
+        <iframe class="slds-m-horizontal_x-large slds-box" height="400px"  scrolling="no" src={mainIframeUrl} frameborder="0"  width="90%">
+        </iframe>
+    </div>
+    </lightning-card>
+
+</template>
